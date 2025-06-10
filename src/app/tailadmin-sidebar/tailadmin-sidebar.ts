@@ -3,9 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-tailadmin-sidebar',
+  standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  templateUrl: './tailadmin-sidebar.html',
+  styleUrl: './tailadmin-sidebar.scss'
 })
-export class DashboardComponent {}
+export class TailadminSidebar {
+
+}
