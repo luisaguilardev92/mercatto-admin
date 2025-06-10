@@ -1,0 +1,63 @@
+<div class="flex h-screen bg-gray-100">
+  <aside class="w-64 bg-white shadow-md hidden md:block">
+    <div class="p-4 text-lg font-bold">Mercatto</div>
+    <nav class="px-2">
+      <a routerLink="/dashboard" routerLinkActive="bg-gray-200" class="block py-2 px-4 rounded hover:bg-gray-200">Dashboard</a>
+      <a routerLink="/marketing-dashboard" routerLinkActive="bg-gray-200" class="block py-2 px-4 rounded hover:bg-gray-200">Marketing</a>
+      <a routerLink="/taxpayers" routerLinkActive="bg-gray-200" class="block py-2 px-4 rounded hover:bg-gray-200">Taxpayers</a>
+    </nav>
+  </aside>
+  <div class="flex flex-col flex-1 overflow-y-auto">
+    <header class="bg-white shadow p-4">
+      <h1 class="text-xl font-semibold">Marketing Dashboard</h1>
+    </header>
+    <main class="p-4 space-y-4">
+      <div class="grid gap-4 grid-cols-1 md:grid-cols-4">
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-sm font-medium text-gray-500">Visitors</h2>
+          <p class="text-2xl font-bold">2,340</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-sm font-medium text-gray-500">Leads</h2>
+          <p class="text-2xl font-bold">189</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-sm font-medium text-gray-500">Conversions</h2>
+          <p class="text-2xl font-bold">74</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-sm font-medium text-gray-500">Revenue</h2>
+          <p class="text-2xl font-bold">$12.3k</p>
+        </div>
+      </div>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="bg-white p-4 rounded shadow h-64 flex items-center justify-center text-gray-400">
+          Line Chart
+        </div>
+        <div class="bg-white p-4 rounded shadow h-64 flex items-center justify-center text-gray-400">
+          Bar Chart
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded shadow overflow-x-auto">
+        <table class="min-w-full text-left text-sm">
+          <thead>
+            <tr>
+              <th class="py-2 px-4 font-semibold">Campaign</th>
+              <th class="py-2 px-4 font-semibold">Visits</th>
+              <th class="py-2 px-4 font-semibold">Conversions</th>
+              <th class="py-2 px-4 font-semibold">Revenue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t" *ngFor="let c of campaigns">
+              <td class="py-2 px-4">{{ c.name }}</td>
+              <td class="py-2 px-4">{{ c.visits }}</td>
+              <td class="py-2 px-4">{{ c.conversions }}</td>
+              <td class="py-2 px-4">{{ c.revenue }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
