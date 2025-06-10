@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Styling with Tailwind CSS
+
+This project uses [Tailwind CSS](https://tailwindcss.com/) for utility-first styling. The configuration is stored in `tailwind.config.js` and compiled through PostCSS using `postcss.config.js`.
+
+## Icons
+
+[Font Awesome](https://fontawesome.com/) is included via the Angular package `@fortawesome/angular-fontawesome`. A sample icon is displayed in `App` component to verify the setup.
