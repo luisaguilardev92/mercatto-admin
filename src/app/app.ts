@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,9 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 export class App {
   protected title = 'mercatto-admin';
   faCoffee = faCoffee;
+  constructor(public auth: AuthService) {}
+
+  logout() {
+    this.auth.logout();
+  }
 }
