@@ -1,18 +1,18 @@
 <div class="min-h-screen flex items-center justify-center bg-gray-100">
   <div class="w-full max-w-sm bg-white p-6 rounded shadow">
     <h2 class="text-xl font-bold mb-4 text-center">Mercatto Admin Login</h2>
-    <form (ngSubmit)="submit()" class="space-y-4" #f="ngForm">
+    <form (ngSubmit)="submit()" class="space-y-4" [formGroup]="form">
       <div>
         <label class="block mb-1 text-sm font-medium">Usuario</label>
-        <input type="email" name="username" [(ngModel)]="username" required class="w-full border rounded px-3 py-2" />
+        <input type="email" formControlName="username" class="w-full border rounded px-3 py-2" />
       </div>
       <div>
-        <label class="block mb-1 text-sm font-medium">Contrase\u00f1a</label>
-        <input type="password" name="password" [(ngModel)]="password" required class="w-full border rounded px-3 py-2" />
+        <label class="block mb-1 text-sm font-medium">Contraseña</label>
+        <input type="password" formControlName="password" class="w-full border rounded px-3 py-2" />
       </div>
       <div class="text-red-500" *ngIf="error">{{ error }}</div>
-      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded" [disabled]="loading">
-        {{ loading ? 'Ingresando...' : 'Ingresar' }}
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded" [disabled]="form.invalid">
+        Ingresar
       </button>
     </form>
   </div>
