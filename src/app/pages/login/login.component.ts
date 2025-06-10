@@ -11,8 +11,8 @@ import { AuthService } from '../../auth/auth.service';
   templateUrl: './login.component.html'
 })
 export class LoginComponent {
-  username = '';
-  password = '';
+  username = 'master-admin@mercatto.com';
+  password = '12345678#';
   loading = false;
   error = '';
 
