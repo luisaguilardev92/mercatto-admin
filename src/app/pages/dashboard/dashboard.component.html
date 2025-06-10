@@ -1,4 +1,30 @@
-<div class="p-4">
-  <h1 class="text-2xl font-bold">Dashboard</h1>
-  <p>Bienvenido al panel de administraci\u00f3n.</p>
+<div class="flex h-screen bg-gray-100">
+  <aside class="w-64 bg-white shadow-md hidden md:block">
+    <div class="p-4 text-lg font-bold">Mercatto</div>
+    <nav class="px-2">
+      <a routerLink="/dashboard" routerLinkActive="bg-gray-200" class="block py-2 px-4 rounded hover:bg-gray-200">Dashboard</a>
+      <a routerLink="/taxpayers" routerLinkActive="bg-gray-200" class="block py-2 px-4 rounded hover:bg-gray-200">Taxpayers</a>
+    </nav>
+  </aside>
+  <div class="flex flex-col flex-1 overflow-y-auto">
+    <header class="bg-white shadow p-4">
+      <h1 class="text-xl font-semibold">Dashboard</h1>
+    </header>
+    <main class="p-4 space-y-4">
+      <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-sm font-medium text-gray-500">Users</h2>
+          <p class="text-2xl font-bold">123</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-sm font-medium text-gray-500">Sessions</h2>
+          <p class="text-2xl font-bold">5</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-sm font-medium text-gray-500">Tasks</h2>
+          <p class="text-2xl font-bold">42</p>
+        </div>
+      </div>
+    </main>
+  </div>
 </div>

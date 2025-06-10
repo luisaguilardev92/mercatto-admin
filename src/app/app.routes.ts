@@ -6,6 +6,12 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [authGuard] },
+  {
+    path: 'taxpayers',
+    loadChildren: () =>
+      import('./modules/taxpayer/taxpayer.module').then((m) => m.TaxpayerModule),
+    canActivate: [authGuard],
+  },
   { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
   { path: '**', redirectTo: 'dashboard' }
 ];
